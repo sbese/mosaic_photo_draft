@@ -1,0 +1,114 @@
+jsonFlickrApi({
+    "sizes": {
+        "canblog": 0,
+        "canprint": 0,
+        "candownload": 0,
+        "size": [
+            {
+                "label": "Square",
+                "width": 75,
+                "height": 75,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_s.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/sq\/",
+                "media": "photo"
+            },
+            {
+                "label": "Large Square",
+                "width": 150,
+                "height": 150,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_q.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/q\/",
+                "media": "photo"
+            },
+            {
+                "label": "Thumbnail",
+                "width": 100,
+                "height": 67,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_t.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/t\/",
+                "media": "photo"
+            },
+            {
+                "label": "Small",
+                "width": 240,
+                "height": 160,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_m.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/s\/",
+                "media": "photo"
+            },
+            {
+                "label": "Small 320",
+                "width": 320,
+                "height": 214,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_n.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/n\/",
+                "media": "photo"
+            },
+            {
+                "label": "Small 400",
+                "width": 400,
+                "height": 267,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_w.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/w\/",
+                "media": "photo"
+            },
+            {
+                "label": "Medium",
+                "width": 500,
+                "height": 334,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/m\/",
+                "media": "photo"
+            },
+            {
+                "label": "Medium 640",
+                "width": 640,
+                "height": 427,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_z.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/z\/",
+                "media": "photo"
+            },
+            {
+                "label": "Medium 800",
+                "width": 800,
+                "height": 534,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_c.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/c\/",
+                "media": "photo"
+            },
+            {
+                "label": "Large",
+                "width": 1024,
+                "height": 684,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_f0ac678ff3_b.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/l\/",
+                "media": "photo"
+            },
+            {
+                "label": "Large 1600",
+                "width": 1600,
+                "height": 1068,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_d1b721b17e_h.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/h\/",
+                "media": "photo"
+            },
+            {
+                "label": "Large 2048",
+                "width": 2048,
+                "height": 1367,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_eeb87ad401_k.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/k\/",
+                "media": "photo"
+            },
+            {
+                "label": "X-Large 3K",
+                "width": 3072,
+                "height": 2051,
+                "source": "https:\/\/live.staticflickr.com\/65535\/49440370533_fcf3f2dc90_3k.jpg",
+                "url": "https:\/\/www.flickr.com\/photos\/cathyjophotography\/49440370533\/sizes\/3k\/",
+                "media": "photo"
+            }
+        ]
+    },
+    "stat": "ok"
+})

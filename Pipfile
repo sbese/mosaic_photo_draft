@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+pylint = "*"
+jupyterlab = "*"
+notebook = "*"
+autopep8 = "*"
+
+[packages]
+requests = "*"
+flickrapi = "*"
+pillow = "*"
+notebook = "*"
+psycopg2 = "*"
+jupyter = "*"
+ipython = "*"
+django-extensions = "*"
+aiohttp = "*"
+aiopg = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.7"

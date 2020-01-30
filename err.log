@@ -1,0 +1,2378 @@
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+unhandled exception during asyncio.run() shutdown
+task: <Task finished coro=<get_square() done, defined at async_test_2cycle_np.py:70> exception=RuntimeError("await wasn't used with future")>
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 80, in get_square
+    asyncio.create_task(fetch_content(finded_photo['source'], session)))
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+Traceback (most recent call last):
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 967, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 830, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 784, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 73, in get_square
+    async with session.get(get_sizes(photo_id),proxy=proxy_url,verify_ssl=False) as response:
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/bese/.local/share/virtualenvs/mosaic_photo_2-dgtgpB1U/lib/python3.7/site-packages/aiohttp/connector.py", line 971, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host www.flickr.com:443 ssl:False [Temporary failure in name resolution]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 175, in <module>
+    asyncio.run(main(photos_page))
+  File "/usr/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "async_test_2cycle_np.py", line 104, in main
+    await asyncio.gather(*tasks)
+  File "async_test_2cycle_np.py", line 84, in get_square
+    await asyncio.gather(*task)
+RuntimeError: await wasn't used with future
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b82ae090>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b852e890>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8f01ed0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b82ba710>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b85c8710>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b81d3390>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8ee0250>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b834f050>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b85c8090>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b82ca250>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b852e050>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b80dfa10>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8eea750>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b81d3a90>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8e0b490>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8f3e310>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8e873d0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8450fd0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8e82190>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b829c310>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b85c8c90>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8df85d0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b8e56890>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b82d2290>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b8e793d0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8302e50>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b82ae310>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b8e78090>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b81d3190>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:80> wait_for=<_GatheringFuture pending cb=[<TaskWakeupMethWrapper object at 0x7f42b8f050d0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b833a3d0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:80> wait_for=<_GatheringFuture pending cb=[<TaskWakeupMethWrapper object at 0x7f42b829cfd0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b82f6710>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:73> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f42b84509d0>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:80> wait_for=<_GatheringFuture pending cb=[<TaskWakeupMethWrapper object at 0x7f42b8f45a10>()]>>
+Task was destroyed but it is pending!
+task: <Task pending coro=<get_square() running at async_test_2cycle_np.py:80> wait_for=<_GatheringFuture pending cb=[<TaskWakeupMethWrapper object at 0x7f42b8e45690>()]>>
+Exception ignored in: <coroutine object get_square at 0x7f42b81e28c0>
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 83, in get_square
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 350, in create_task
+RuntimeError: no running event loop
+sys:1: RuntimeWarning: coroutine 'get_square' was never awaited
+Task was destroyed but it is pending!
+task: <Task pending coro=<fetch_content() running at async_test_2cycle_np.py:87> cb=[gather.<locals>._done_callback() at /usr/lib/python3.7/asyncio/tasks.py:691]>
+Task was destroyed but it is pending!
+task: <Task pending coro=<fetch_content() running at async_test_2cycle_np.py:89> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.7/asyncio/tasks.py:820, <TaskWakeupMethWrapper object at 0x7f42b82ca510>()]> cb=[gather.<locals>._done_callback() at /usr/lib/python3.7/asyncio/tasks.py:691]>
+Task was destroyed but it is pending!
+task: <Task pending coro=<fetch_content() running at async_test_2cycle_np.py:87> cb=[gather.<locals>._done_callback() at /usr/lib/python3.7/asyncio/tasks.py:691]>
+Task was destroyed but it is pending!
+task: <Task pending coro=<fetch_content() running at async_test_2cycle_np.py:87> cb=[gather.<locals>._done_callback() at /usr/lib/python3.7/asyncio/tasks.py:691]>
+sys:1: RuntimeWarning: coroutine 'fetch_content' was never awaited
+Exception ignored in: <coroutine object fetch_content at 0x7f42b8f8d9e0>
+Traceback (most recent call last):
+  File "async_test_2cycle_np.py", line 93, in fetch_content
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 350, in create_task
+RuntimeError: no running event loop
